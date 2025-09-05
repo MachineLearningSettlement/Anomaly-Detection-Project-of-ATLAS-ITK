@@ -1,12 +1,20 @@
+1. Description de l'approche à appliquer 
+
+
+-----------------------------------------------------------------------------------------
+
+2. Description du contenu : 
+	
+
 add_mask_to_gth.py : permet d'ajouetr aux patchs de ground_truth '_mask'. Ceci est indispensable avant de lancer AnomalyDINO 
 	
 
 backbones.py : code source qui agit sur le réseau d'extarction des features (à garder tel quel)
 	
 
-check.py
-	
+check.py : permet de vérifier s'il y a meme nombre d'images en test et ground_truth 
 
+	
 convertblack.py : convertir les résults de détection de l'anomalyDINO en échelle binaire
 	
 
