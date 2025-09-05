@@ -1,1 +1,34 @@
+add_mask_to_gth.py : permet d'ajouetr aux patchs de ground_truth '_mask'. Ceci est indispensable avant de lancer AnomalyDINO 
+	
 
+backbones.py : code source qui agit sur le réseau d'extarction des features (à garder tel quel)
+	
+
+check.py
+	
+
+convertblack.py : convertir les résults de détection de l'anomalyDINO en échelle binaire
+	
+
+createblack.py : créer un dossier good en ground_truth 
+	
+
+detection.py : code source qui agit sur le mécanisme de détection (à garder tel quel)
+	
+
+post_eval.py :  coude source qui permet l'évaluation de performance de l'AnomalyDINO (changer juste le nom de dataset)
+	
+
+recalculate_metrics.py : permet de calculer Pixel F1SCORE et Image F1SCORE
+	
+
+run_anomalydino.py : code source pour lancer l'AnomalyDINO en few-shot 
+	
+
+run_anomalydino_batched.py : code source pour lancer l'ANomalyDINO en zero-shot
+	
+
+utils.py : code source qui controle le preprecessing et la définition de dataset (changer juste le nom de dataset)
+	
+
+visualize.py : code source permet la visualisation des résulatas (à garder tel quel)
