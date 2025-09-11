@@ -13,7 +13,7 @@ avec des hyperparamètres personnalisés.
 
 1.3 Redimensionnement des patchs, filtration des pixels noirs et exclusion des bordures (voir mémoire section 3.3.3)
 
-Les scripts à utiliser sont image_cleaning.py (situé dans le dossier DataBase), qui divise les images originales en patchs de 128x128 (paramètre à adapter dans le script). Ensuite, 
+Les scripts à utiliser sont image_cleaning.py (situé dans le dossier Dataset_Construction), qui divise les images originales en patchs de 128x128 (paramètre à adapter dans le script). Ensuite, 
 nous supprimons les patchs d’entraînement contenant plus de 90 % de pixels noirs (paramètre à adapter) avec no_black_pad.py. Pour l’exclusion des bordures, nous convertissons les résultats 
 de détection en masques binaires avec convertoutputtomask.py, puis nous convertissons les patchs de test en échelle binaire avec tresholdtiles.py avant de les éroder avec erodingtiles.py.
 L’intersection entre les patchs binaires érodés et les résultats de détection binaires permet d’obtenir une meilleure qualité de détection d’anomalies avec moins de faux positifs.
