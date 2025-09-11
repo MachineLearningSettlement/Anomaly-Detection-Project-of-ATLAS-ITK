@@ -1,1 +1,21 @@
+Ce lien [https://drive.google.com/drive/folders/1e5JJYAhaQ-gLnVrafgy7V3_YcpsJG5cY?usp=sharing] va vous diriger vers un dossier Drive intitulé DataBase&Results.
 
+Dans ce dossier, vous trouverez :
+
+*Deux dossiers de datasets :
+
+  *l’un contenant le dataset des anciens modules. (Dataset_old_modules)
+
+  *l’autre contenant le dataset des nouveaux modules. (Dataset_new_modules)
+
+*Deux dossiers d’images originales :
+
+  *l’un avec les images originales des pads des anciens modules. (Original_pictures_old_modules)
+
+  *l’autre avec les images originales des pads des nouveaux modules. (Original_pictures_new_modules)
+
+*Deux dossiers de résultats :
+
+  *l’un contenant les résultats de détection obtenus en appliquant la meilleure pipeline algorithmique sur le dataset des anciens modules. (Results_old_modules)
+
+  *l’autre contenant les résultats de détection d’anomalies obtenus avec la même pipeline sur le dataset des nouveaux modules. (Results_new_modules)
