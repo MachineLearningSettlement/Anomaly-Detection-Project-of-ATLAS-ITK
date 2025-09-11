@@ -1,4 +1,25 @@
-1. Description de l'approche à appliquer 
+1. Description de l'approche à appliquer
+
+Dans le cadre de ce projet, nous avons appliqué une multitude d'approches :
+
+1.1 Ajustement des hyperparamètres (voir mémoire section 3.3.1)
+
+Le script à utiliser est PatchCore_detection.py, dans lequel nous devons personnaliser nos hyperparamètres.
+
+1.2 Réduction du bruit (voir mémoire section 3.3.2)
+
+Les scripts à utiliser sont adapteimages.py, pour débruiter les patchs et réduire l’effet de granularité des surfaces de cuivre, avant de lancer PatchCore_detection.py sur ce nouveau dataset 
+avec des hyperparamètres personnalisés.
+
+1.3 Redimensionnement des patchs, filtration des pixels noirs et exclusion des bordures (voir mémoire section 3.3.3)
+
+Les scripts à utiliser sont image_cleaning.py (situé dans le dossier DataBase), qui divise les images originales en patchs de 128x128 (paramètre à adapter dans le script). Ensuite, 
+nous supprimons les patchs d’entraînement contenant plus de 90 % de pixels noirs (paramètre à adapter) avec no_black_pad.py. Pour l’exclusion des bordures, nous convertissons les résultats 
+de détection en masques binaires avec convertoutputtomask.py, puis nous convertissons les patchs de test en échelle binaire avec tresholdtiles.py avant de les éroder avec erodingtiles.py.
+L’intersection entre les patchs binaires érodés et les résultats de détection binaires permet d’obtenir une meilleure qualité de détection d’anomalies avec moins de faux positifs.
+Ces détections, encore en échelle binaire, peuvent ensuite être projetées sur les patchs originaux de test sous forme de masques rouges à l’aide de reconstructtilefrommask.py.
+
+>>> L’approche 1.3 est celle qui donne les meilleurs résultats et est considérée comme le pipeline algorithmique le plus optimal à adopter dans le cadre du projet.
 
 
 -----------------------------------------------------------------------------------------
@@ -18,10 +39,7 @@ convertoutputtomask.py : permet de convertir les masques de détection appliqué
 	
 
 erodingtiles.py : script d'érodage des patchs de test
-	
-
-image_cleaning.py : le script principal qui permet la division des images originales (droite/gauche) en patchs et reconstruire le dataset en fonction de ground_truth, train et test
-	
+		
 
 no_black_pad.py : permet de filtrer les patchs d'entrainement pour supprimer les patchs qui ont un nombre de pixel >= seuil à choisir (de 50% à 90%)
 	
@@ -30,9 +48,6 @@ output_mask_intersection.py : permet de garder en échelle binaire les zones d'i
 	
 
 reconstructtilefrommask.py : les résulats de détection issus de output_mask_intersection.py seront réajuster sur les patchs de test originaux 
-	
-
-remove_black.py : nettoyer dataset des patchs qo sont complètement noirs
-	
+		
 
 tresholdtiles.py : convertir les patchs de test en noir et blanc (écelle binaire) 
