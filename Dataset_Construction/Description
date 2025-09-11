@@ -1,1 +1,7 @@
+image_cleaning.py : script principal qui divise les images originales ainsi que les calques de masques d’anomalies (créés avec GIMP) en patchs. Il construit ensuite le dataset en trois 
+ensembles (ground_truth, test et train) et organise, dans chaque dossier, les patchs selon leur catégorie (good, chemical_contamination, dust, scratch).
 
+remove_black.py : supprime du dossier d’entraînement les patchs qui sont complètement noirs.
+
+check.py : vérifie que le nombre d’images dans le dossier test correspond bien au nombre d’images dans le ground_truth (parfois le modèle PatchCore ou AnomalyDINO ne fonctionne pas 
+correctement car il peut y avoir une différence entre les fichiers de test et de ground_truth ; ils doivent être identiques en termes de nomination).
