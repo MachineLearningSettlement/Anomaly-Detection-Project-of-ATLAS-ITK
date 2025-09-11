@@ -26,10 +26,11 @@ Ces détections, encore en échelle binaire, peuvent ensuite être projetées su
 
 2. Description du contenu : 
 
-
 PatchCore_detection.py : code source permettant d’exécuter le modèle PatchCore.
 
 adapteimages.py : utilisé si l’on souhaite appliquer un débruitage afin de réduire le bruit de granularité présent sur les plaques de cuivre (approche d’amélioration).
+
+check.py : vérifie que le nombre d’images dans le dossier test est identique à celui du ground_truth.
 
 convertoutputtomask.py : convertit les masques de détection des patchs de test générés par PatchCore en noir et blanc (échelle binaire).
 
