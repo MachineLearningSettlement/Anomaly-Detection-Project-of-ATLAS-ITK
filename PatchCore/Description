@@ -27,27 +27,18 @@ Ces détections, encore en échelle binaire, peuvent ensuite être projetées su
 2. Description du contenu : 
 
 
-PatchCore_detection.py : le code source qui fait tourner le modèle PatchCore	
+PatchCore_detection.py : code source permettant d’exécuter le modèle PatchCore.
 
-adapteimages.py : si on a besoin d'appliquer un débruitage pour réduire le bruit de granularité des plaques de cuivre (approche d'amélioration)
-	
+adapteimages.py : utilisé si l’on souhaite appliquer un débruitage afin de réduire le bruit de granularité présent sur les plaques de cuivre (approche d’amélioration).
 
-check.py : permet de vérifier s'il y a meme nombre d'images en test et ground_truth 
-	
+convertoutputtomask.py : convertit les masques de détection des patchs de test générés par PatchCore en noir et blanc (échelle binaire).
 
-convertoutputtomask.py : permet de convertir les masques de détection appliqués sur les patchs de test obtenus en sortie de PatchCore en noir et blanc (échelle binaire)
-	
+erodingtiles.py : applique une érosion sur les patchs de test.
 
-erodingtiles.py : script d'érodage des patchs de test
-		
+no_black_pad.py : filtre les patchs d’entraînement en supprimant ceux contenant un pourcentage de pixels noirs supérieur ou égal à un seuil défini (entre 50 % et 90 %).
 
-no_black_pad.py : permet de filtrer les patchs d'entrainement pour supprimer les patchs qui ont un nombre de pixel >= seuil à choisir (de 50% à 90%)
-	
+output_mask_intersection.py : conserve uniquement, en échelle binaire, les zones d’intersection entre les patchs érodés (issus de erodingtiles.py) et les masques de détection (issus de convertoutputtomask.py).
 
-output_mask_intersection.py : permet de garder en échelle binaire les zones d'intersection entre les patchs érodés issus de erodingtiles.py et les masques de détection issus de convertoutputtomask.py
-	
+reconstructtilefrommask.py : réajuste les résultats de détection issus de output_mask_intersection.py sur les patchs de test originaux.
 
-reconstructtilefrommask.py : les résulats de détection issus de output_mask_intersection.py seront réajuster sur les patchs de test originaux 
-		
-
-tresholdtiles.py : convertir les patchs de test en noir et blanc (écelle binaire) 
+tresholdtiles.py : convertit les patchs de test en noir et blanc (échelle binaire).
