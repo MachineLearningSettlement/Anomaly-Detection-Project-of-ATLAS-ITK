@@ -5,28 +5,43 @@
 
 2. Description du contenu :
 
-add_mask_to_gth.py : Ajoute le suffixe _mask aux patchs du ground truth. Cette étape est indispensable avant de lancer AnomalyDINO.
+add_mask_to_gth.py
+Ajoute le suffixe _mask aux patchs du ground truth. Cette étape est indispensable avant de lancer AnomalyDINO.
 
-backbones.py : Contient le code source responsable de l’extraction des features à partir du réseau de fondation (backbone).
+backbones.py
+Contient le code source responsable de l’extraction des features à partir du réseau de fondation (backbone).
 (À conserver tel quel)
 
-check.py : Vérifie que le nombre d’images dans le dossier test correspond bien au nombre d’images dans le ground truth.
+check.py
+Vérifie que le nombre d’images dans le dossier test correspond bien au nombre d’images dans le ground truth.
 
-convertblack.py : Convertit les résultats de détection générés par AnomalyDINO en échelle binaire.
+convertblack.py
+Convertit les résultats de détection générés par AnomalyDINO en échelle binaire.
 
-createblack.py : Crée un dossier good dans le ground truth.
+createblack.py
+Crée un dossier good dans le ground truth.
 
-detection.py : Contient le code source du mécanisme de détection d’AnomalyDINO. (À conserver tel quel)
+detection.py
+Contient le code source du mécanisme de détection d’AnomalyDINO.
+(À conserver tel quel)
 
-post_eval.py : Évalue les performances d’AnomalyDINO après exécution. (Seul le nom du dataset doit être modifié si nécessaire)
+post_eval.py
+Évalue les performances d’AnomalyDINO après exécution.
+(Seul le nom du dataset doit être modifié si nécessaire)
 
-recalculate_metrics.py : Recalcule les métriques Pixel F1-Score et Image F1-Score.
+recalculate_metrics.py
+Recalcule les métriques Pixel F1-Score et Image F1-Score.
 
-run_anomalydino.py : Lance AnomalyDINO en mode few-shot.
+run_anomalydino.py
+Lance AnomalyDINO en mode few-shot.
 
-run_anomalydino_batched.py : Lance AnomalyDINO en mode zero-shot.
+run_anomalydino_batched.py
+Lance AnomalyDINO en mode zero-shot.
 
-utils.py : Gère le prétraitement des données et la définition du dataset. (Seul le nom du dataset doit être modifié si nécessaire)
+utils.py
+Gère le prétraitement des données et la définition du dataset.
+(Seul le nom du dataset doit être modifié si nécessaire)
 
-visualize.py : Permet la visualisation des résultats obtenus avec AnomalyDINO.
+visualize.py
+Permet la visualisation des résultats obtenus avec AnomalyDINO.
 (À conserver tel quel)
