@@ -1,36 +1,26 @@
 1. Description de l'approche à appliquer 
 
+Deux approches ont été mises en œuvre : l’ajustement des hyperparamètres et la résolution harmonisée au redimensionnement des patchs (voir mémoire section 3.4). 
+Pour la deuxième approche, il est essentiel de bien prendre en compte l’hyperparamètre resolution d’AnomalyDINO, qui doit être adapté en fonction de la version du dataset utilisée (128, 256 ou 512).
 
 -----------------------------------------------------------------------------------------
 
 2. Description du contenu :
 
-add_mask_to_gth.py
-Ajoute le suffixe _mask aux patchs du ground truth. Cette étape est indispensable avant de lancer AnomalyDINO.
+_______________ Scripts Sources ____________________
 
 backbones.py
 Contient le code source responsable de l’extraction des features à partir du réseau de fondation (backbone).
 (À conserver tel quel)
 
-check.py
-Vérifie que le nombre d’images dans le dossier test correspond bien au nombre d’images dans le ground truth.
-
-convertblack.py
-Convertit les résultats de détection générés par AnomalyDINO en échelle binaire.
-
-createblack.py
-Crée un dossier good dans le ground truth.
-
 detection.py
 Contient le code source du mécanisme de détection d’AnomalyDINO.
 (À conserver tel quel)
 
+
 post_eval.py
 Évalue les performances d’AnomalyDINO après exécution.
 (Seul le nom du dataset doit être modifié si nécessaire)
-
-recalculate_metrics.py
-Recalcule les métriques Pixel F1-Score et Image F1-Score.
 
 run_anomalydino.py
 Lance AnomalyDINO en mode few-shot.
@@ -45,3 +35,19 @@ Gère le prétraitement des données et la définition du dataset.
 visualize.py
 Permet la visualisation des résultats obtenus avec AnomalyDINO.
 (À conserver tel quel)
+
+________________________________________________________
+
+add_mask_to_gth.py
+Ajoute le suffixe _mask aux patchs du ground truth. Cette étape est indispensable avant de lancer AnomalyDINO.
+
+convertblack.py
+Convertit les résultats de détection générés par AnomalyDINO en échelle binaire.
+
+createblack.py
+Crée un dossier good dans le ground truth.
+
+recalculate_metrics.py
+Recalcule les métriques Pixel F1Score et Image F1Score.
+
+
