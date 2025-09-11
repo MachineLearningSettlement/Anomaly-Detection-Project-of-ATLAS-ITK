@@ -9,45 +9,29 @@ Pour la deuxième approche, il est essentiel de bien prendre en compte l’hyper
 
 _______________ Scripts Sources ____________________
 
-backbones.py
-Contient le code source responsable de l’extraction des features à partir du réseau de fondation (backbone).
-(À conserver tel quel)
+backbones.py : contient le code source responsable de l’extraction des features à partir du réseau de fondation (backbone) (À conserver tel quel).
 
-detection.py
-Contient le code source du mécanisme de détection d’AnomalyDINO.
-(À conserver tel quel)
+detection.py : contient le code source du mécanisme de détection d’AnomalyDINO (À conserver tel quel). 
 
 
-post_eval.py
-Évalue les performances d’AnomalyDINO après exécution.
-(Seul le nom du dataset doit être modifié si nécessaire)
+post_eval.py : évalue les performances d’AnomalyDINO après exécution (Seul le nom du dataset doit être modifié si nécessaire).
 
-run_anomalydino.py
-Lance AnomalyDINO en mode few-shot.
+run_anomalydino.py : lance AnomalyDINO en mode few-shot.
 
-run_anomalydino_batched.py
-Lance AnomalyDINO en mode zero-shot.
+run_anomalydino_batched.py : lance AnomalyDINO en mode zero-shot.
 
-utils.py
-Gère le prétraitement des données et la définition du dataset.
-(Seul le nom du dataset doit être modifié si nécessaire)
+utils.py : gère le prétraitement des données et la définition du dataset (Seul le nom du dataset doit être modifié si nécessaire).
 
-visualize.py
-Permet la visualisation des résultats obtenus avec AnomalyDINO.
-(À conserver tel quel)
+visualize.py : permet la visualisation des résultats obtenus avec AnomalyDINO (À conserver tel quel). 
 
 ________________________________________________________
 
-add_mask_to_gth.py
-Ajoute le suffixe _mask aux patchs du ground truth. Cette étape est indispensable avant de lancer AnomalyDINO.
+add_mask_to_gth.py : ajoute le suffixe _mask aux patchs du ground truth. Cette étape est indispensable avant de lancer AnomalyDINO.
 
-convertblack.py
-Convertit les résultats de détection générés par AnomalyDINO en échelle binaire.
+convertblack.py: convertit les résultats de détection générés par AnomalyDINO en échelle binaire.
 
-createblack.py
-Crée un dossier good dans le ground truth.
+createblack.py : crée un dossier good dans le ground truth.
 
-recalculate_metrics.py
-Recalcule les métriques Pixel F1Score et Image F1Score.
+recalculate_metrics.py : recalcule les métriques Pixel F1Score et Image F1Score.
 
 
