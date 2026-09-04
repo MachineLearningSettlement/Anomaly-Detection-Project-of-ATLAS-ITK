@@ -4,4 +4,4 @@ ensembles (ground_truth, test et train) et organise, dans chaque dossier, les pa
 remove_black.py : supprime du dossier d’entraînement les patchs qui sont complètement noirs.
 
 check.py : vérifie que le nombre d’images dans le dossier test correspond bien au nombre d’images dans le ground_truth (parfois le modèle PatchCore ou AnomalyDINO ne fonctionne pas 
-correctement car il peut y avoir une différence entre les fichiers de test et de ground_truth ; ils doivent être identiques en termes de nomination).
+correctement car il peut y avoir une différence entre les fichiers de test et de ground_truth , ils doivent être identiques en termes de nomination).
