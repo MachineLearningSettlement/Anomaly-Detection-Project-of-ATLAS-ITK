@@ -6,7 +6,7 @@ dataset: real normal pixel-sheet images provided the geometry, shape, and struct
 
 Contamination, Dust, or Scratch—provided realistic anomaly morphology through IP-Adapter conditioning; the generation process preserved the copper pixel-sheet
 
-structure and black background while producing 100 synthetic anomalous images per class (300 total). The resulting synthetic anomalies were combined with real
+structure and black background while producing 150 synthetic anomalous images per class (450 total). The resulting synthetic anomalies were combined with real
 
 anomalous data, while synthetic and real normal images formed the overall normal-image pool. Second, I designed a DPO post-training pipeline for Llama 3.2 
 
