@@ -69,7 +69,7 @@ DATASET_NAME = "Llama3.2_Vision_DPO_PixelSheet_Retrieval"
 DATASET_PATH = "llama32_vision_dpo_pixel_sheet_retrieval"
 
 # Hyperparameter requested for rejected-image selection.
-NUM_REJECTED_PER_CHOSEN = 5
+NUM_REJECTED_PER_CHOSEN = 30
 
 BETA = 0.1
 NUM_TRAIN_EPOCHS = 3
