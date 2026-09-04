@@ -229,7 +229,7 @@ def tokenize_example(processor, prompt, chosen_image, rejected_image):
 # ============================================================
 
 def load_existing_dataset():
-    """Load the assumed existing dataset; do not create training data."""
+    
     print(f"Loading: {DATASET_NAME}")
     dataset = load_dataset(DATASET_PATH, split="train")
 
