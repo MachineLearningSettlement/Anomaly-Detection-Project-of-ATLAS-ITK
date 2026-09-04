@@ -32,6 +32,7 @@ ANOMALY_PROMPTS = {
     "Scratch": """High-resolution industrial microscope image of a semiconductor pixel sheet made from copper, realistic copper pixel-sheet geometry, on a pure dark black background. Synthesize a realistic physical scratch defect on the copper pixel sheet. The scratch must resemble the morphology and visual characteristics of the provided real scratch reference image. Include a thin irregular scratch line with realistic variation in width and depth, damaged copper texture and physically plausible surface damage. Preserve the copper pixel-sheet geometry from the normal base image. The anomaly must look physically present on the copper surface. Photorealistic scientific industrial inspection image, sharp microscopic details, realistic materials and lighting.""",
 }
 
+
 NEGATIVE_PROMPT = """cartoon, illustration, anime, drawing, CGI, 3D render, fantasy, people, human, face, text, letters, numbers, watermark, logo, colored background, white background, gray background, unrealistic copper, plastic, glass, metal other than copper, different object, different scene, wrong geometry, distorted pixel sheet, deformed pixel sheet, melted pixel sheet, missing pixel sheet, low resolution, blurry, noisy, unrealistic defect, artificial-looking anomaly, oversized anomaly, excessive damage, duplicate defects, unrealistic dust, unrealistic scratch, unrealistic contamination"""
 
 
