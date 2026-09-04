@@ -1,6 +1,16 @@
 """
 Llama 3.2 Vision — DPO post-training for pixel-sheet retrieval.
 
+------------------------------------------------------------------------------
+THE MAIN AIM OF THE POST-TRAINING: 
+     We want to post-train Llama 3.2 Vision so that to enrich our train data and eval data with efficient and 
+     equilibrated samples for more robust and generalized learning. So given a description such as “find pixel 
+     sheets with this geometry” or “find images containing dust anomalies on such specific pixel-sheet
+     geometry,” we are going to train on an equilibrated normal dataset accounting for a wider variety of shapes, and also 
+     for a plausible evaluation, wehere can use a variety of anomalous images presented on a variety of shapes, so 
+     we could be able to assess the performance on a large scale.
+------------------------------------------------------------------------------     
+
 BLOCK 1 — MODEL PREPARATION
     Pretrained Llama 3.2 Vision → LoRA target modules → LoRA adapters
 
