@@ -15,7 +15,7 @@ MODEL_ID = "stabilityai/stable-diffusion-3.5-large"
 IMAGE_ENCODER_ID = "google/siglip-so400m-patch14-384"
 IP_ADAPTER_ID = "InstantX/SD3.5-Large-IP-Adapter"
 
-IMAGES_PER_CLASS = 100
+IMAGES_PER_CLASS = 150
 IMAGE_WIDTH = 1024
 IMAGE_HEIGHT = 1024
 NUM_INFERENCE_STEPS = 28
