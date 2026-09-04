@@ -1,1 +1,25 @@
+Developement of a multimodal data-generation and post-training pipeline to improve semantic retrieval of semiconductor copper pixel-sheet images for anomaly-
 
+inspection systems such as PatchCore and AnomalyDINO. First, I used Stable Diffusion 3.5 Large in an image-to-image generation framework to expand the anomaly 
+
+dataset: real normal pixel-sheet images provided the geometry, shape, and structural diversity, while real anomalous images of the corresponding class—Chemical 
+
+Contamination, Dust, or Scratch—provided realistic anomaly morphology through IP-Adapter conditioning; the generation process preserved the copper pixel-sheet
+
+structure and black background while producing 100 synthetic anomalous images per class (300 total). The resulting synthetic anomalies were combined with real
+
+anomalous data, while synthetic and real normal images formed the overall normal-image pool. Second, I designed a DPO post-training pipeline for Llama 3.2 
+
+Vision 11B to learn semantic image retrieval: preference data associate textual descriptions of pixel-sheet geometry, or geometry combined with anomaly type, 
+
+with a matching image and multiple non-matching images. Each chosen/rejected combination is converted into a pairwise DPO sample, with the two candidate images 
+
+presented simultaneously to the vision-language model and the desired preference represented by the textual response “Image 1” or “Image 2”; candidate ordering 
+
+is randomized to prevent positional bias. The pretrained Llama 3.2 Vision backbone is frozen and LoRA adapters are applied to attention and feed-forward 
+
+projection modules, while the DPO objective optimizes the policy to assign higher relative probability to the image matching the semantic description than to 
+
+the rejected alternative. The resulting adapted model is intended to retrieve representative and geometrically diverse pixel-sheet images, enabling more 
+
+systematic construction of balanced training and evaluation datasets for downstream anomaly-detection models.
